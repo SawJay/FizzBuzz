@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>App Name: A coding challenge</title>
+    <title>FizzBuzz: A coding challenge</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,7 +27,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-xxl">
-                <a class="navbar-brand" href="#"> <img src="/img/coloredlogosvg.svg" height="30">App Name</a>
+                <a class="navbar-brand" href="#"> <img src="/img/coloredlogosvg.svg" height="30">FizzBuzz</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -53,10 +53,59 @@
     </header>
 
     <main class="container-xxl py-3 mt-5">
-        <h1>APP UI GOES HERE</h1>
-        <label>Secret Message</label>
-        <input id="message" type="text" value="Hi" placeholder="Enter a Message">
-        <button id="btnSubmit" class="btn btn-primary">Display Message</button>
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col">
+                <!-- Info -->
+                <h1 class="fw-bold">FizzBuzz: A Coding Challenge</h1>
+                <p class="lead">Living life one loop at a time. FizzBuzz is a JavaScript coding challenge using loops.
+                    This challenge is issued where numbers divisible by 3 will be replaced by "Fizz" and numbers
+                    divisible by 5 will be replaced by "Buzz". Numbers divisible by both 3 and 5 should be replaced by
+                    "FizzBuzz".
+                </p>
+                <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                <p>
+                    Enter a starting value and ending value. Press the button and watch the values between those numbers
+                    appear on the page!
+                </p>
+            </div>
+            <div class="col">
+                <!-- APP UI -->
+                <form action="#">
+                    <h3>Enter Values</h3>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <label for="startNumber" class="form-label">
+                                Start Number
+                            </label>
+                            <input id="startNumber" class="form-control" placeholder="Start Number" type="number"
+                                required aria-label="Start Number" name="startNumber" value="1" min="1" max="100">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="endNumber" class="form-label">
+                                End Number
+                            </label>
+                            <input id="endNumber" class="form-control" placeholder="End Number" type="number" required
+                                aria-label="End Number" name="endNumber" value="100" min="1" max="100">
+                        </div>
+                        <div class="col-12 text-end">
+                            <button type="button" class="btn btn-primary" id="btnSubmit">
+                                Use CountUP!
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <h2 class="mt-5 border-bottom border-2">Results</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tbody id="results">
+                            <!-- Results -->
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="container-fluid py-3">
@@ -100,7 +149,7 @@
 
     <script>
         let button = document.getElementById('btnSubmit');
-        button.addEventListener('click', displayMessage);
+        button.addEventListener('click', getValues);
     </script>
 
 </body>
