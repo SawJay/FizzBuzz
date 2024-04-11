@@ -1,19 +1,19 @@
 // Collect user values
 function getValues() {
-  let startNumber = document.getElementById('startNumber').value;
-  let endNumber = document.getElementById('endNumber').value;
+  let fizzValue = document.getElementById('fizzValue').value;
+  let buzzValue = document.getElementById('buzzValue').value;
 
-  startNumber = Number(startNumber)
-  endNumber = Number(endNumber)
+  fizzValue = Number(fizzValue)
+  buzzValue = Number(buzzValue)
 
-  if (isNaN(startNumber) || isNaN(endNumber)) {
+  if (isNaN(fizzValue) || isNaN(buzzValue)) {
     Swal.fire({
       icon: 'error',
       title: 'Oops!',
       text: 'Please enter valid numbers for CountUP! to use.',
       backdrop: false
     })
-  } else if ((startNumber > endNumber) || (startNumber < 0) || (endNumber > 100)) {
+  } else if ((fizzValue > buzzValue) || (fizzValue < 0) || (buzzValue > 100)) {
     Swal.fire({
       icon: 'error',
       title: 'Oops!',
@@ -22,7 +22,7 @@ function getValues() {
     })
   } else {
 
-    let generatedNumbers = generateFizzBuzz(startNumber, endNumber);
+    let generatedNumbers = generateFizzBuzz(fizzValue, buzzValue);
 
     displayFizzBuzz(generatedNumbers);
   }
