@@ -101,13 +101,13 @@ footer .bi:hover {
 }
 
 .Fizz {
-
+    color: red !important; 
 }
 
 .Buzz {
-
+color: blue !important; 
 }
 
 .FizzBuzz {
-
+    color: orange !important;
 }

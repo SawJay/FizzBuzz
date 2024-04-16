@@ -10,14 +10,14 @@ function getValues() {
     Swal.fire({
       icon: 'error',
       title: 'Oops!',
-      text: 'Please enter valid numbers for CountUP! to use.',
+      text: 'Please enter valid numbers for FizzBuzz to use.',
       backdrop: false
     })
   } else if ((fizzValue > buzzValue) || (fizzValue < 0) || (buzzValue > 100)) {
     Swal.fire({
       icon: 'error',
       title: 'Oops!',
-      text: 'Please enter valid numbers for CountUP! to use.',
+      text: 'Please enter valid numbers for FizzBuzz to use.',
       backdrop: false
     })
   } else {
@@ -70,7 +70,7 @@ function displayFizzBuzz(fizzbuzzResults) {
 
     let className = '';
 
-    tableHtml += `<tr><td class="${className}">${message}</td></tr>`;
+    tableHtml += `<tr><td class="${message}">${message}</td></tr>`;
 
   }
 
